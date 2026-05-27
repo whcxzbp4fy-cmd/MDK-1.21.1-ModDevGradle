@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/door_bottom_rh",
+    "textures": {
+    "bottom": "voiddoor:block/void_door_bottom",
+    "top": "voiddoor:block/void_door_top"
+    }
+}
