@@ -8,12 +8,12 @@ plugins {
 // Make the heavy NeoForm runtime task opt-in to avoid running decompilers and
 // external tools on constrained CI runners or developer machines by default.
 // To run it explicitly: `./gradlew createMinecraftArtifacts -PrunNeoForm=true`
-tasks.matching { it.name == 'createMinecraftArtifacts' }.configureEach {
-    onlyIf { ->
-        // Run only when the project property 'runNeoForm' is provided and true
-        project.hasProperty('runNeoForm') && project.property('runNeoForm').toString().toLowerCase() in ['1', 'true', 'yes', 'y']
-    }
-}
+// tasks.matching { it.name == 'createMinecraftArtifacts' }.configureEach {
+//     onlyIf { ->
+//         // Run only when the project property 'runNeoForm' is provided and true
+//         project.hasProperty('runNeoForm') && project.property('runNeoForm').toString().toLowerCase() in ['1', 'true', 'yes', 'y']
+//     }
+// }
 
 tasks.named('wrapper', Wrapper).configure {
     // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
